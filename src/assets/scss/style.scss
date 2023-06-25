@@ -1,23 +1,16 @@
-@import "fonts", "normalize", "variables";
+@import "fonts", "normalize", "themes";
 
 html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: "Satoshi", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 16px;
+  background-color: var(--color-primary);
+  color: var(--color-text);
 }
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  min-height: 100%;
-  main {
-    flex: 1 1 auto;
-  }
-}
-[class*="__container"] {
+.app-container {
   margin: 0 auto;
   padding: 0 $container-padding + px;
   max-width: $container-max-width + px;
@@ -31,6 +24,30 @@ body {
     object-fit: cover;
   }
 }
+._ibg {
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
 .visually-hidden {
   @include visually-hidden;
+}
+
+.main-title {
+  @include av("font-size", 40, 36);
+  font-weight: bold;
+  color: var(--color-secondary);
+  margin-bottom: em(35, 40);
+}
+
+.content-state {
+  display: block;
+  font-size: 40px;
+  margin-top: 170px;
+  text-align: center;
 }
