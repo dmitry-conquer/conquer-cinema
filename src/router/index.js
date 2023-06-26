@@ -15,72 +15,73 @@ import MoviesByGenresView from "@/views/MoviesByGenresView.vue";
 import NotFoundView from "@/views/NotFoundView.vue";
 
 export const router = createRouter({
-  history: createWebHistory(),
+  base: "/conquer-cinema",
+  history: createWebHistory("/conquer-cinema/"),
 
   routes: [
     {
       name: "Home",
-      path: "/conquer-cinema/",
+      path: "/",
       component: HomeView,
     },
     {
       name: "Now Watching",
-      path: "/conquer-cinema/now-watching/:page?",
+      path: "/now-watching/:page?",
       component: NowWatchingView,
     },
     {
       name: "Top Rated",
-      path: "/conquer-cinema/top-rated",
+      path: "/top-rated",
       component: TopRatedView,
     },
     {
       name: "Popular",
-      path: "/conquer-cinema/popular",
+      path: "/popular",
       component: PopularView,
     },
     {
       name: "Coming Soon",
-      path: "/conquer-cinema/coming-soon",
+      path: "/coming-soon",
       component: ComingSoonView,
     },
     {
       name: "Favorites",
-      path: "/conquer-cinema/favorites",
+      path: "/favorites",
       component: FavoritesView,
     },
     {
       name: "Similar",
-      path: "/conquer-cinema/similar/:id",
+      path: "/similar/:id",
       component: SimilarView,
     },
     {
       name: "NotFound",
-      path: "/conquer-cinema/:pathMatch(.*)*",
+      path: "/:pathMatch(.*)*",
       component: NotFoundView,
     },
     {
       name: "Random",
-      path: "/conquer-cinema/random",
+      path: "/random",
       component: RandomMovieView,
     },
     {
       name: "Infinity",
-      path: "/conquer-cinema/infinity",
+      path: "/infinity",
       component: InfinityMoviesView,
     },
     {
       name: "Genres",
-      path: "/conquer-cinema/genres",
+      path: "/genres",
       component: GenresView,
     },
     {
       name: "MoviesByGenre",
-      path: "/conquer-cinema/genres/:id",
+      path: "/genres/:id",
       component: MoviesByGenresView,
     },
     {
       name: "Current",
-      path: "/conquer-cinema/cur/:id",
+      path: "/cur/:id",
       component: SingleView,
     },
   ],
