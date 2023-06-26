@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHashHistory } from "vue-router";
 
 import HomeView from "@/views/HomeView.vue";
 import NowWatchingView from "@/views/NowWatchingView.vue";
@@ -15,8 +15,7 @@ import MoviesByGenresView from "@/views/MoviesByGenresView.vue";
 import NotFoundView from "@/views/NotFoundView.vue";
 
 export const router = createRouter({
-  base: "/conquer-cinema",
-  history: createWebHistory("/conquer-cinema/"),
+  history: createWebHashHistory(""),
 
   routes: [
     {
