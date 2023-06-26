@@ -11,7 +11,7 @@
             :to="`/genres/${genre.id}`"
             class="item-genres__link">
             <img
-              :src="`/images/genres/${genre.image}`"
+              :src="`/images/genres/${genre.id}.webp`"
               :alt="genre.name"
               class="item-genres__image" />
             <h2 class="item-genres__title">
@@ -26,17 +26,85 @@
 
 <script setup>
 import { ref } from "vue";
-import { getMoviesData } from "@/api";
 
-const genres = ref([]);
-
-async function loadGenres() {
-  const rawData = await getMoviesData("genre/movie", null, "list");
-  genres.value = rawData.genres.map(genre => {
-    return { ...genre, image: `${genre.id}.webp` };
-  });
-}
-loadGenres();
+const genres = ref([
+  {
+    id: 28,
+    name: "Бойовик",
+  },
+  {
+    id: 12,
+    name: "Пригоди",
+  },
+  {
+    id: 16,
+    name: "Мультфільм",
+  },
+  {
+    id: 35,
+    name: "Комедія",
+  },
+  {
+    id: 80,
+    name: "Кримінал",
+  },
+  {
+    id: 99,
+    name: "Документальний",
+  },
+  {
+    id: 18,
+    name: "Драма",
+  },
+  {
+    id: 10751,
+    name: "Сімейний",
+  },
+  {
+    id: 14,
+    name: "Фентезі",
+  },
+  {
+    id: 36,
+    name: "Історичний",
+  },
+  {
+    id: 27,
+    name: "Жахи",
+  },
+  {
+    id: 10402,
+    name: "Музика",
+  },
+  {
+    id: 9648,
+    name: "Детектив",
+  },
+  {
+    id: 10749,
+    name: "Мелодрама",
+  },
+  {
+    id: 878,
+    name: "Фантастика",
+  },
+  {
+    id: 10770,
+    name: "Телефільм",
+  },
+  {
+    id: 53,
+    name: "Трилер",
+  },
+  {
+    id: 10752,
+    name: "Військовий",
+  },
+  {
+    id: 37,
+    name: "Вестерн",
+  },
+]);
 </script>
 
 <style lang="scss">
