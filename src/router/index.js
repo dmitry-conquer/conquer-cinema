@@ -22,6 +22,7 @@ export const router = createRouter({
       name: "Home",
       path: "/",
       component: HomeView,
+      alias: "/conquer-cinema",
     },
     {
       name: "Now Watching",
