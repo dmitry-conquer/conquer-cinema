@@ -15,73 +15,72 @@ import MoviesByGenresView from "@/views/MoviesByGenresView.vue";
 import NotFoundView from "@/views/NotFoundView.vue";
 
 export const router = createRouter({
-  base: "/conquer-cinema",
   history: createWebHistory(),
 
   routes: [
     {
       name: "Home",
-      path: "/",
+      path: "/conquer-cinema/",
       component: HomeView,
     },
     {
       name: "Now Watching",
-      path: "/now-watching/:page?",
+      path: "/conquer-cinema/now-watching/:page?",
       component: NowWatchingView,
     },
     {
       name: "Top Rated",
-      path: "/top-rated",
+      path: "/conquer-cinema/top-rated",
       component: TopRatedView,
     },
     {
       name: "Popular",
-      path: "/popular",
+      path: "/conquer-cinema/popular",
       component: PopularView,
     },
     {
       name: "Coming Soon",
-      path: "/coming-soon",
+      path: "/conquer-cinema/coming-soon",
       component: ComingSoonView,
     },
     {
       name: "Favorites",
-      path: "/favorites",
+      path: "/conquer-cinema/favorites",
       component: FavoritesView,
     },
     {
       name: "Similar",
-      path: "/similar/:id",
+      path: "/conquer-cinema/similar/:id",
       component: SimilarView,
     },
     {
       name: "NotFound",
-      path: "/:pathMatch(.*)*",
+      path: "/conquer-cinema/:pathMatch(.*)*",
       component: NotFoundView,
     },
     {
       name: "Random",
-      path: "/random",
+      path: "/conquer-cinema/random",
       component: RandomMovieView,
     },
     {
       name: "Infinity",
-      path: "/infinity",
+      path: "/conquer-cinema/infinity",
       component: InfinityMoviesView,
     },
     {
       name: "Genres",
-      path: "/genres",
+      path: "/conquer-cinema/genres",
       component: GenresView,
     },
     {
       name: "MoviesByGenre",
-      path: "/genres/:id",
+      path: "/conquer-cinema/genres/:id",
       component: MoviesByGenresView,
     },
     {
       name: "Current",
-      path: "/cur/:id",
+      path: "/conquer-cinema/cur/:id",
       component: SingleView,
     },
   ],
