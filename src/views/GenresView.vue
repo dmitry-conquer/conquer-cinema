@@ -11,7 +11,7 @@
             :to="`/genres/${genre.id}`"
             class="item-genres__link">
             <img
-              :src="`/images/genres/${genre.id}.webp`"
+              :src="`/conquer-cinema/images/genres/${genre.id}.webp`"
               :alt="genre.name"
               class="item-genres__image" />
             <h2 class="item-genres__title">
